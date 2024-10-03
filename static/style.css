@@ -1,11 +1,14 @@
+/* Global body styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: darkgrey;
-    color: whitesmoke;
+    color: white;
+    padding-bottom: 60px; 
 }
 
+/* Header styling */
 header {
     background-color: darkblue;
     color: white;
@@ -13,16 +16,21 @@ header {
     text-align: center;
 }
 
+/* Navigation link styling */
 header nav a {
     color: #fff;
     text-decoration: none;
     margin: 0 15px;
+    font-weight: bold;
 }
 
+/* Main content area styling */
 main {
     padding: 20px;
+    padding-bottom: 60px; 
 }
 
+/* Footer styling */
 footer {
     background-color: #333;
     color: #fff;
@@ -31,25 +39,6 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
-}
-
-/* Link styling */
-a {
-    color: lightblue; /* Default link color */
-    text-decoration: none; /* Remove underline */
-    font-weight: bold; /* Make links bold */
-    transition: color 0.3s ease; /* Smooth color transition */
-}
-
-a:hover {
-    color: yellow; /* Change color on hover */
-    text-decoration: underline; /* Add underline on hover */
-}
-
-a:active {
-    color: orange; /* Change color when clicked */
-}
-
-a:visited {
-    color: lightgreen; /* Change color after visit */
+    height: 50px; 
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3); 
 }
