@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 6: Retirement Savings Strategies</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Module 6: Retirement Savings Strategies</h1>
+    </header>
+
+    <main>
+        <!-- Retirement Accounts Section -->
+        <section>
+            <h2>Retirement Accounts</h2>
+            <ul>
+                <li>401(k)</li>
+                <li>IRA</li>
+                <li>Roth IRA</li>
+            </ul>
+            <p>For a deeper understanding of retirement accounts, check out these resources:</p>
+            <p>
+                - Article: <a href="https://www.investopedia.com/retirement-planning-4689695" target="_blank">What is a 401(k)?</a><br>
+                - Article: <a href="https://www.investopedia.com/terms/i/ira.asp" target="_blank">What is an IRA?</a><br>
+                - Article: <a href="https://www.investopedia.com/terms/r/rothira.asp" target="_blank">What is a Roth IRA?</a>
+            </p>
+            <!-- Corrected YouTube Embed -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/SaC0zOS1UHk" frameborder="0" allowfullscreen></iframe>
+        </section>
+
+        <!-- Contribution Limits Section -->
+        <section>
+            <h2>Contribution Limits</h2>
+            <p>Maximize your contributions based on account type and employer match. Be aware of annual limits to maximize your savings effectively...</p>
+            <p>Learn more about contribution limits through the following articles:</p>
+            <p>
+                - Article: <a href="https://www.nerdwallet.com/article/investing/401k-contribution-limits" target="_blank">401(k) Contribution Limits Explained</a><br>
+                - Article: <a href="https://www.nerdwallet.com/article/investing/ira-contribution-limits" target="_blank">IRA Contribution Limits</a>
+            </p>
+            <!-- Corrected YouTube Embed -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ySCSyxCMRNg" frameborder="0" allowfullscreen></iframe>
+        </section>
+    </main>
+
+    <footer>
+        <a href="{% url 'learning_modules' %}">Back to Learning Modules</a>
+    </footer>
+</body>
+</html>

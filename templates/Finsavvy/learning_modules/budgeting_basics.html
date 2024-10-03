@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 1: Budgeting Basics</title>
+    {%load static%}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Module 1: Budgeting Basics</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>What is Budgeting?</h2>
+            <p>Budgeting is the process of creating a plan to spend your money...</p>
+        </section>
+
+        <section>
+            <h2>Steps to Create a Budget</h2>
+            <ul>
+                <li>Track your income</li>
+                <li>List your expenses</li>
+                <li>Set financial goals</li>
+                <li>Adjust as needed</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Useful Tools</h2>
+            <ul>
+                <li><a href="https://www.mint.com" target="_blank">Mint</a></li>
+                <li><a href="https://www.youneedabudget.com" target="_blank">You Need A Budget (YNAB)</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Watch This Video on budget basics for beginners to help you understand it more. Have fun.</h2>
+            <iframe width="560" height="315" 
+                    src="https://www.youtube.com/embed/u5zmySa7yLs" 
+                    title="YouTube video" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+            </iframe>
+        </section>
+        
+        <section>
+            <h3>Watch This Video on budget basics for beginners to help you understand it more. Have fun, learn, and practice.</h3>
+            <iframe width="560" height="315" 
+                    src="https://www.youtube.com/embed/C7GzLzbEDfE" 
+                    title="YouTube video" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+            </iframe>
+        </section>
+        
+    </main>
+
+    <footer>
+        <a href="{% url 'learning_modules' %}">Back to Learning Modules</a>
+    </footer>
+</body>
+</html>

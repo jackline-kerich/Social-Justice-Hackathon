@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 8: Taxes and Tax Planning</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Module 8: Taxes and Tax Planning</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Understanding Taxes</h2>
+            <p>Taxes are compulsory contributions levied by governments on income, property, sales, and other transactions. Understanding the different types of taxes is essential for effective financial planning.</p>
+            <ul>
+                <li><strong>Income Tax:</strong> A tax on the earnings of individuals and businesses. It's usually progressive, meaning the rate increases as income increases.</li>
+                <li><strong>Property Tax:</strong> Tax based on the value of owned property, often used to fund local services like schools and infrastructure.</li>
+                <li><strong>Sales Tax:</strong> A consumption tax imposed on the sale of goods and services, typically collected at the point of sale.</li>
+            </ul>
+            <p>For more information on understanding taxes, read <a href="https://www.irs.gov/businesses/small-businesses-self-employed/understanding-taxes" target="_blank">this IRS guide</a>.</p>
+        </section>
+
+        <section>
+            <h2>Tax Deductions and Credits</h2>
+            <p>Tax deductions and credits can significantly reduce your tax burden. Knowing how to leverage them is key to effective tax planning.</p>
+            <ul>
+                <li><strong>Tax Deductions:</strong> These reduce your taxable income, leading to a lower overall tax bill. Common deductions include mortgage interest, state taxes, and charitable contributions.</li>
+                <li><strong>Tax Credits:</strong> These directly reduce the amount of tax owed, making them more valuable than deductions. Examples include the Earned Income Tax Credit and Child Tax Credit.</li>
+            </ul>
+            <p>Explore <a href="https://www.kiplinger.com/taxes/601596/tax-deductions-and-credits-you-can-take" target="_blank">this Kiplinger article</a> for a comprehensive list of deductions and credits.</p>
+        </section>
+
+        <section>
+            <h2>Additional Resources</h2>
+            <p>For further exploration of taxes and tax planning, check out:</p>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=9G2GpGq-w-M" target="_blank">Understanding Your Tax Obligations - YouTube</a></li>
+                <li><a href="https://www.investopedia.com/terms/t/taxplanning.asp" target="_blank">Tax Planning - Investopedia</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <a href="{% url 'learning_modules' %}">Back to Learning Modules</a>
+    </footer>
+</body>
+</html>

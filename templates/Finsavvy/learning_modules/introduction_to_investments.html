@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 4: Introduction to Investments</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Module 4: Introduction to Investments</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Types of Investments</h2>
+            <ul>
+                <li>Stocks</li>
+                <li>Bonds</li>
+                <li>Mutual Funds</li>
+                <li>ETFs</li>
+            </ul>
+            <p>For a detailed overview, check out this article: <a href="https://www.investopedia.com/terms/i/investment.asp" target="_blank">Types of Investments</a>.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/5Vxjyz9DZ6k" frameborder="0" allowfullscreen></iframe>
+        </section>
+    
+        <section>
+            <h2>Risk vs Reward</h2>
+            <p>Investments involve balancing risk and reward. Higher risk often leads to greater potential returns...</p>
+            <p>Learn more from this video: <a href="https://www.youtube.com/watch?v=5G1g0w6eW5I" target="_blank">Understanding Risk and Return</a>.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/5G1g0w6eW5I" frameborder="0" allowfullscreen></iframe>
+        </section>
+    
+        <section>
+            <h2>Diversification</h2>
+            <p>Spread out investments to minimize risk; it will only bring returns if you know what you are doing. Check out this video: <a href="https://www.youtube.com/watch?v=wbjPiYE-F4Y" target="_blank">Why Diversification Matters</a>.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/wbjPiYE-F4Y" frameborder="0" allowfullscreen></iframe>
+        </section>
+    </main>
+    
+
+    <footer>
+        <a href="{% url 'learning_modules' %}">Back to Learning Modules</a>
+    </footer>
+</body>
+</html>

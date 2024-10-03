@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Quizzes</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <style>
+        .question { margin-bottom: 20px; }
+        .answers { list-style: none; padding: 0; }
+        .answers li { margin-bottom: 10px; }
+        .timer { font-size: 20px; color: red; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'dashboard' %}">Dashboard</a>
+            <a href="{% url 'logout' %}">Logout</a>
+        </nav>
+    </header>
+    
+    <main>
+        <h1>FinSavvy Quiz: Test Your Financial Knowledge</h1>
+        <p>This section will reinforce learning through interactive quizzes.</p>
+
+        <!-- Timer section, hidden initially -->
+        <div class="timer" id="timer-section" style="display: none;">
+            Time left: <span id="timer">120</span> seconds
+        </div>
+
+        <!-- Start Quiz Button -->
+        <button id="start-quiz-btn" onclick="startQuiz()">Start Quiz</button>
+
+        <!-- Quiz Form, hidden initially -->
+        <form method="post" id="quiz-form" style="display: none;">
+            {% csrf_token %}
+            {% for question in questions %}
+            <div class="question">
+                <h3>{{ question.text }}</h3>
+                <ul class="answers">
+                    {% for answer in question.answers.all %}
+                    <li>
+                        <input type="radio" name="question_{{ question.id }}" value="{{ answer.id }}" required disabled> {{ answer.text }}
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endfor %}
+            <button type="submit">Submit Answers</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Finsavvy App. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Timer function
+        let timerInterval;
+
+        function startTimer(duration, display) {
+            let timeLeft = duration;
+            timerInterval = setInterval(function () {
+                if (timeLeft <= 0) {
+                    clearInterval(timerInterval);
+                    alert("Time is up!");
+                    document.getElementById("quiz-form").submit();  // Auto-submit when time runs out
+                } else {
+                    display.textContent = timeLeft;
+                    timeLeft--;
+                }
+            }, 1000);
+        }
+
+        // Function to start the quiz
+        function startQuiz() {
+            // Hide the start button
+            document.getElementById("start-quiz-btn").style.display = "none";
+
+            // Show the timer and quiz form
+            document.getElementById("timer-section").style.display = "block";
+            document.getElementById("quiz-form").style.display = "block";
+
+            // Enable the quiz inputs
+            const inputs = document.querySelectorAll("#quiz-form input[type='radio']");
+            inputs.forEach(input => input.disabled = false);
+
+            // Start the timer (120 seconds in this case)
+            const display = document.querySelector('#timer');
+            startTimer(120, display);
+        }
+    </script>
+</body>
+</html>

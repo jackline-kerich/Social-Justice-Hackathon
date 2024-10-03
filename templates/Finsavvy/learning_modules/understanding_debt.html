@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 2: Understanding Debt</title>
+    {%load static%}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Module 2: Understanding Debt</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Types of Debt</h2>
+            <ul>
+                <li>Secured Debt (e.g., mortgage, car loan)</li>
+                <li>Unsecured Debt (e.g., credit cards, personal loans)</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Watch This Video on YouTube to understand debt in detail.</h2>
+            <iframe width="560" height="315" 
+                    src="https://www.youtube.com/embed/vFdw62az-j8" 
+                    title="YouTube video" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+            </iframe>
+        </section>
+        
+        <section>
+            <h2>Debt Management Strategies: Debt Snowball and Debt Avalanche</h2>
+
+            <h3>Debt Snowball Method:</h3>
+            <p>This strategy focuses on paying off your debts starting with the smallest balance, regardless of interest rates.</p>
+            <h4>How it works:</h4>
+            <ul>
+                <li>List all your debts from the smallest balance to the largest.</li>
+                <li>Make minimum payments on all your debts except the smallest.</li>
+                <li>Put any extra money toward the smallest debt until it’s paid off.</li>
+                <li>Once the smallest debt is cleared, move on to the next smallest, and so on.</li>
+            </ul>
+            <h4>Why it works:</h4>
+            <p>The small victories of paying off smaller debts quickly help build momentum and motivation, creating a "snowball effect" where you stay encouraged to keep paying down debts.</p>
+            <h4>Best for:</h4>
+            <p>Individuals who need psychological boosts from quickly eliminating debts, even if they aren’t tackling high-interest debts first.</p>
+
+            <h3>Debt Avalanche Method:</h3>
+            <p>This strategy prioritizes paying off debts with the highest interest rates first, regardless of balance size.</p>
+            <h4>How it works:</h4>
+            <ul>
+                <li>List all your debts in order from the highest interest rate to the lowest.</li>
+                <li>Make minimum payments on all debts except the one with the highest interest rate.</li>
+                <li>Put any extra money toward the highest-interest debt until it’s cleared.</li>
+                <li>Then, focus on the debt with the next highest interest rate, and so on.</li>
+            </ul>
+            <h4>Why it works:</h4>
+            <p>By tackling high-interest debts first, you minimize the total amount of interest paid over time, saving more money in the long run.</p>
+            <h4>Best for:</h4>
+            <p>Individuals who are financially disciplined and want to minimize the overall cost of debt repayment.</p>
+
+            <h3>Choosing Between the Two:</h3>
+            <p>Debt Snowball is ideal if you need quick psychological wins to stay motivated, while Debt Avalanche is better if you’re focused on minimizing interest costs over time, even though results may take longer to feel.</p>
+        </section>
+
+        <!-- Suggested Articles for Further Reading -->
+        <section>
+            <h2>Further Reading on Debt Management</h2>
+            <ul>
+                <li>
+                    <a href="https://www.investopedia.com/articles/personal-finance/082715/debt-snowball-or-debt-avalanche-best-method-you.asp" target="_blank">
+                        Investopedia - Debt Snowball vs. Debt Avalanche: Which is Best for You?
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.thebalancemoney.com/snowball-vs-avalanche-method-which-is-better-4589236" target="_blank">
+                        The Balance - Debt Snowball vs. Avalanche Method: Which Is Better?
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Understanding Credit Scores</h2>
+            <p>A credit score is a numerical representation of your creditworthiness, ranging from 300 to 850. It plays a crucial role in determining interest rates on loans and credit approvals.</p>
+            
+            <h3>How Credit Scores Work</h3>
+            <ul>
+                <li><strong>Payment History (35%)</strong>: Timely payments positively impact your score.</li>
+                <li><strong>Credit Utilization (30%)</strong>: Keep your balances below 30% of your credit limit.</li>
+                <li><strong>Length of Credit History (15%)</strong>: Longer credit history can improve your score.</li>
+                <li><strong>Types of Credit (10%)</strong>: A mix of credit types can be beneficial.</li>
+                <li><strong>New Credit Inquiries (10%)</strong>: Limit new applications to avoid hurting your score.</li>
+            </ul>
+        
+            <h3>How to Improve Your Credit Score</h3>
+            <ol>
+                <li>Pay your bills on time to establish a positive payment history.</li>
+                <li>Reduce your credit utilization ratio by paying down existing balances.</li>
+                <li>Check your credit report regularly for inaccuracies.</li>
+                <li>Avoid opening multiple credit accounts at once.</li>
+            </ol>
+            
+            <p>For more detailed information, check out the resources from <a href="https://www.experian.com/blogs/news/2022/10/what-is-a-credit-score">Experian</a> and the <a href="https://www.consumerfinance.gov/ask-cfpb/what-is-a-credit-score-en-1977/">Consumer Financial Protection Bureau</a>.</p>
+        </section>
+        
+    </main>
+
+    <footer>
+        <a href="{% url 'learning_modules' %}">Back to Learning Modules</a>
+    </footer>
+</body>
+</html>

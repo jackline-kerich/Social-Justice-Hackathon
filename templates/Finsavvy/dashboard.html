@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'logout' %}">Logout</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>Welcome to Your Financial Literacy Dashboard</h1>
+            <p>Welcome to your dashboard! Here, you can access tailored learning modules that will empower you to take control of your financial future. Dive into our resources and tools designed to help you manage your money wisely, set achievable goals, and stay informed with real-time tips.</p>
+        </section>
+
+        <section>
+            <h2><a href="{% url 'learning_modules' %}">Learning Modules</a></h2>
+            <p>Tailored lessons on topics such as budgeting, debt management, saving, and investments.</p>
+        </section>
+
+        <section>
+            <h2><a href="{% url 'personalized_budget_planner' %}">Personalized Budget Planner</a></h2>
+            <p>Automatically categorize expenses and track budget adherence.</p>
+        </section>
+
+        <section>
+            <h2><a href="{% url 'goal_setting_tracking' %}">Goal Setting & Tracking</a></h2>
+            <p>Users can set savings goals and receive real-time updates on progress.</p>
+        </section>
+
+        <section>
+            <h2><a href="{% url 'real_time_financial_tips' %}">Real-Time Financial Tips</a></h2>
+            <p>Integrated notifications based on financial activity.</p>
+        </section>
+
+        <section>
+            <h2><a href="{% url 'progress_quizzes' %}">Progress Quizzes</a></h2>
+            <p>Reinforce learning through interactive quizzes and challenges.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Finsavvy App. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Finsavvy App</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Finsavvy App</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'register' %}">Register</a></li>
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="{% url 'dashboard' %}">Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Welcome Section -->
+        <section>
+            <h2>Empower Yourself with Financial Knowledge</h2>
+            <p>Finsavvy is designed to guide you toward financial literacy, providing valuable insights on saving, investing, budgeting, and more. Our platform offers interactive lessons, real-time tips, and tools to help you take control of your finances.</p>
+            <p>Ready to get started? <strong>Register</strong> now to create your account or <strong>Login</strong> if you already have an account to access your personalized dashboard.</p>
+        </section>
+
+        <!-- Dashboard Information Section -->
+        <section>
+            <h2>Your Dashboard</h2>
+            <p>Once you log in, you’ll be directed to your <strong>Dashboard</strong>, where you can:</p>
+            <ul>
+                <li><strong>Track your savings:</strong> Get an overview of your savings progress and access tools for budgeting and goal setting.</li>
+                <li><strong>Learn key financial concepts:</strong> Explore interactive modules on topics like retirement planning, credit management, and debt reduction.</li>
+                <li><strong>Access financial tips:</strong> Receive personalized advice based on your current financial situation to improve your financial health.</li>
+                <li><strong>View your expenses:</strong> Analyze your spending patterns and discover ways to cut unnecessary costs.</li>
+                <li><strong>Set financial goals:</strong> Create and monitor specific financial objectives such as saving for a house, vacation, or education.</li>
+            </ul>
+            <p>Use the links in your dashboard to navigate to different financial resources and take full control of your financial future.</p>
+        </section>
+
+        <!-- Call to Action -->
+        <section>
+            <h2>Get Started Now!</h2>
+            <p>Don't wait to take charge of your finances. <a href="{% url 'register' %}">Sign up</a> today to start your journey toward financial independence.</p>
+            <p>Already a member? <a href="{% url 'login' %}">Login</a> and continue where you left off!</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Finsavvy App | Your Financial Wellness Partner</p>
+    </footer>
+</body>
+</html>

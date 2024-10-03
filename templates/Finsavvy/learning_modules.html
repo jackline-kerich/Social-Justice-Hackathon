@@ -1,0 +1,54 @@
+<!-- templates/Finsavvy/learning_modules.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Modules</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'dashboard' %}">Dashboard</a>
+            <a href="{% url 'logout' %}">Logout</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>Learning Modules</h1>
+            <p>Explore our comprehensive learning modules designed to enhance your financial literacy.</p>
+            <ul>
+                <li><a href="{% url 'module_1' %}">Module 1: Budgeting Basics</a></li>
+                <li><a href="{% url 'module_2' %}">Module 2: Understanding Debt</a></li>
+                <li><a href="{% url 'module_3' %}">Module 3: Smart Saving Strategies</a></li>
+                <li><a href="{% url 'module_4' %}">Module 4: Introduction to Investments</a></li>
+                <li><a href="{% url 'module_5' %}">Module 5: Retirement savings strategies</a></li>
+                <li><a href="{% url 'module_6' %}">Module 6: financial planning goal setting</a></li>
+                <li><a href="{% url 'module_7' %}">Module 7: Managing Financial Risks</a></li>
+                <li><a href="{% url 'module_8' %}">Module 8: Taxes and Tax Planning</a></li>
+                <li><a href="{% url 'module_9' %}">Module 9: Building Wealth Over Time</a></li>
+                <li><a href="{% url 'module_10' %}">Module 10: Creating an Emergency Fund</a></li>
+            </ul>
+        </section>
+        <section>
+            <h2>Listen to this audio book Total money makeover by Dave Ramsey to understand more about money</h2>
+            <iframe width="560" height="315" 
+                    src="https://www.bing.com/videos/riverview/relatedvideo?q=total%20money%20makeover%20free%20pdf&mid=7F804AD61A0138C382507F804AD61A0138C38250&ajaxhist=0" 
+                    title="YouTube video" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+            </iframe>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Finsavvy App. All rights reserved.</p>
+    </footer>
+</body>
+</html>

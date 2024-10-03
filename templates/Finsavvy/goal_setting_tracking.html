@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goal Setting & Tracking</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <style>
+        /* Additional inline styles for a better user experience */
+        .goal-form {
+            margin-top: 20px;
+        }
+        .goal-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .goal-table th, .goal-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        .goal-table th {
+            background-color: darkblue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'dashboard' %}">Dashboard</a>
+            <a href="{% url 'logout' %}">Logout</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Goal Setting & Tracking</h1>
+        <p>This section allows you to set savings goals and track your progress.</p>
+
+        <div class="goal-form">
+            <h2>Set Your Savings Goal</h2>
+            <form id="goal-form" method="POST" action="{% url 'goal_setting_tracking' %}">
+                {% csrf_token %}
+                <label for="goal-name">Goal Name:</label>
+                <input type="text" id="goal-name" name="goal_name" required>
+
+                <label for="goal-amount">Goal Amount:</label>
+                <input type="number" id="goal-amount" name="goal_amount" required>
+
+                <label for="goal-deadline">Deadline:</label>
+                <input type="date" id="goal-deadline" name="goal_deadline" required>
+
+                <button type="submit">Set Goal</button>
+            </form>
+        </div>
+
+        <h2>Your Goals</h2>
+        <table class="goal-table">
+            <thead>
+                <tr>
+                    <th>Goal Name</th>
+                    <th>Goal Amount</th>
+                    <th>Current Amount</th>
+                    <th>Deadline</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- This section will be populated with user's goals from the database -->
+                {% for goal in goals %}
+                <tr>
+                    <td>{{ goal.name }}</td>
+                    <td>${{ goal.amount }}</td>
+                    <td>${{ goal.current_amount }}</td>
+                    <td>{{ goal.deadline }}</td>
+                    <td>{{ goal.status }}</td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="5">No goals set yet.</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        <p>&copy; 2024 Finsavvy App. All rights reserved.</p>
+    </footer>
+</body>
+</html>
